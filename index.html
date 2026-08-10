@@ -30,6 +30,12 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+
+            /* Verhindert das Markieren von Text per Maus */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
 
         /* Header-Bild oben */
@@ -56,6 +62,28 @@
             padding: 30px 0 60px 0;
             flex: 1;
             text-align: left;
+        }
+
+        /* Navigation */
+        .site-nav {
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        .site-nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #666666;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            transition: color 0.2s ease;
+        }
+
+        .site-nav a:hover,
+        .site-nav a.active {
+            color: #000000;
+            text-decoration: underline;
+            text-underline-offset: 4px;
         }
 
         /* Linksbündige Überschrift */
@@ -158,6 +186,10 @@
                 margin: 80px 0 60px 0;
                 white-space: normal;
             }
+            .site-nav a {
+                display: inline-block;
+                margin-bottom: 8px;
+            }
         }
     </style>
 </head>
@@ -170,6 +202,13 @@
 
     <!-- Inhaltsbereich -->
     <main class="content">
+
+        <!-- Navigation -->
+        <nav class="site-nav">
+            <a href="/" class="active">Systems Thinking</a>
+            <a href="/systementwicklung">Systementwicklung</a>
+            <a href="/systemische-strategie">Systemische Strategie</a>
+        </nav>
         
         <!-- Überschrift -->
         <h1 class="main-title">Systems Thinking</h1>
@@ -206,38 +245,29 @@
 
     <!-- Footer mit Medium-Hinweis & Copyright -->
     <footer>
-    <p class="footer-medium">
-        Manchmal finden Sie eine Kleinigkeit zum Lesen von mir auf <a href="https://medium.com/@kristina-neureuther" target="_blank" rel="noopener">Medium</a>.
-    </p>
-    <p class="footer-privacy" style="font-size: 0.75rem; color: #aaaaaa; margin-bottom: 6px;">
-        Diese Seite verwendet keine Cookies, kein Tracking und erhebt keine personenbezogenen Daten.
-    </p>
-    <div class="copyright">
-        &copy; 2026 Kristina Neureuther
-    </div>
-</footer>
+        <p class="footer-medium">
+            Manchmal finden Sie eine Kleinigkeit zum Lesen von mir auf <a href="https://medium.com/@kristina-neureuther" target="_blank" rel="noopener">Medium</a>.
+        </p>
+        <p class="footer-privacy" style="font-size: 0.75rem; color: #aaaaaa; margin-bottom: 6px;">
+            Diese Seite verwendet keine Cookies, kein Tracking und erhebt keine personenbezogenen Daten.
+        </p>
+        <div class="copyright">
+            &copy; 2026 Kristina Neureuther
+        </div>
+    </footer>
 
-    <style>
-  /* Verhindert das Markieren von Text mit der Maus auf der gesamten Seite */
-  body {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-</style>
+    <!-- Kopierschutz-Script -->
+    <script>
+      // Deaktiviert den Rechtsklick (Kontextmenü)
+      document.addEventListener('contextmenu', e => e.preventDefault());
 
-<script>
-  // Deaktiviert den Rechtsklick (Kontextmenü)
-  document.addEventListener('contextmenu', e => e.preventDefault());
-
-  // Blockiert Tastenkombinationen wie Strg/Cmd + C (Kopieren), A (Alles auswählen), X (Ausschneiden)
-  document.addEventListener('keydown', e => {
-    if ((e.ctrlKey || e.metaKey) && ['c', 'a', 'x'].includes(e.key.toLowerCase())) {
-      e.preventDefault(); 
-    }
-  });
-</script>
+      // Blockiert Tastenkombinationen wie Strg/Cmd + C (Kopieren), A (Alles auswählen), X (Ausschneiden)
+      document.addEventListener('keydown', e => {
+        if ((e.ctrlKey || e.metaKey) && ['c', 'a', 'x'].includes(e.key.toLowerCase())) {
+          e.preventDefault(); 
+        }
+      });
+    </script>
 
 </body>
 </html>
