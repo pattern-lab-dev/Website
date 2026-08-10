@@ -79,24 +79,6 @@
             margin-bottom: 1.2rem;
         }
 
-        /* Dezentes Gedanken-Archiv / Medium Link */
-        .medium-link {
-            margin-top: 2rem;
-            font-size: 0.95rem;
-            color: #555555;
-        }
-
-        .medium-link a {
-            color: #111111;
-            text-decoration: underline;
-            text-underline-offset: 4px;
-            transition: opacity 0.2s ease;
-        }
-
-        .medium-link a:hover {
-            opacity: 0.6;
-        }
-
         /* LINKSBÜNDIGER Slogan */
         .tagline {
             text-align: left;
@@ -109,7 +91,7 @@
             white-space: nowrap;
         }
 
-        /* Zitatbereich ganz unten */
+        /* Zitatbereich */
         .quote-section {
             font-family: "Cormorant Garamond", Georgia, serif;
             font-size: clamp(1.1rem, 2vw, 1.35rem);
@@ -131,6 +113,25 @@
             font-style: normal;
             color: #777777;
             letter-spacing: 0.05em;
+        }
+
+        /* Dezenter Medium Link mit reichlich Abstand vor dem Footer */
+        .medium-link {
+            margin-top: 100px;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            color: #555555;
+        }
+
+        .medium-link a {
+            color: #111111;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            transition: opacity 0.2s ease;
+        }
+
+        .medium-link a:hover {
+            opacity: 0.6;
         }
 
         /* Footer ganz unten */
@@ -158,6 +159,9 @@
                 margin: 80px 0 60px 0;
                 white-space: normal;
             }
+            .medium-link {
+                margin-top: 60px;
+            }
         }
     </style>
 </head>
@@ -179,11 +183,6 @@
             <p>Systems Thinking beruht auf universellen Strukturprinzipien.</p>
             <p>Es bildet die Basis für systemische Entwicklung und systemische Strategie – frei von kommerziellen Zwängen und flexibel auf unterschiedlichste Bereiche übertragbar.</p>
             <p>So kann man zum Beispiel zur Erkenntnis gelangen, dass es eine sehr gute Lösung ist, eine Webseite ins Netz zu stellen, obwohl keine benötigt wird.</p>
-            
-            <!-- Leiser Hinweis auf Medium -->
-            <p class="medium-link">
-                Manchmal finden Sie eine Kleinigkeit zum Lesen von mir auf <a href="https://medium.com/@kristina-neureuther" target="_blank" rel="noopener">Medium</a>.
-            </p>
         </div>
 
         <!-- Slogan -->
@@ -191,7 +190,7 @@
             Create Your Own Space.
         </div>
 
-        <!-- Zitat ganz unten -->
+        <!-- Zitat -->
         <div class="quote-section">
             <p class="quote-text">
                 »Viele Leute finden Zahlen wichtig.<br>
@@ -206,6 +205,11 @@
                 stark verändertes Zitat aus "Der kleine Prinz" von Antoine de Saint-Exupéry
             </p>
         </div>
+
+        <!-- Leiser Hinweis auf Medium kurz vor dem Footer -->
+        <p class="medium-link">
+            Manchmal finden Sie eine Kleinigkeit zum Lesen von mir auf <a href="https://medium.com/@kristina-neureuther" target="_blank" rel="noopener">Medium</a>.
+        </p>
 
     </main>
 
