@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Systems Thinking | Kristina Neureuther</title>
-    <!-- Google Fonts: Jost als Fallback für Futura Light -->
+    <!-- Google Fonts: Jost & Cormorant Garamond Light -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
@@ -28,57 +28,62 @@
             min-height: 100vh;
         }
 
-        /* Hero Banner Container */
-        .hero {
-            position: relative;
+        /* Reines Bild ohne Text oben */
+        .hero-banner {
             width: 100%;
-            min-height: 380px;
+            height: 45vh;
+            min-height: 300px;
             overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            padding-top: 60px;
-            padding-bottom: 40px;
-            background-color: #72a3be; /* Blau-Ton als Ausweichfarbe falls Bild lädt */
         }
 
-        /* Das eigentliche Hintergrundbild */
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .hero-banner img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center bottom;
-            z-index: 1;
+            display: block;
         }
 
-        /* Überschriften über dem Bild */
-        .hero-title {
-            position: relative;
-            z-index: 2;
-            color: #ffffff;
-            font-size: clamp(2rem, 4.5vw, 3.8rem);
-            font-weight: 200;
-            letter-spacing: 0.05em;
-            text-align: center;
-            font-family: "Futura-Light", "Futura Light", "Jost", sans-serif;
-            margin-bottom: 15px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.15);
-        }
-
-        /* Hauptinhalt unter dem Bild */
+        /* Hauptinhalt */
         .content {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
-            padding: 80px 20px 60px 20px;
+            padding: 60px 20px 80px 20px;
             flex: 1;
+            text-align: center;
         }
 
+        /* Neue Hauptüberschrift unter dem Bild in Cormorant Garamond */
+        .main-title {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(2.8rem, 5.5vw, 4.8rem);
+            font-weight: 300;
+            letter-spacing: 0.02em;
+            color: #111111;
+            margin-bottom: 10px;
+        }
+
+        /* Die weiteren Begriffe unter dem Titel */
+        .sub-titles {
+            font-family: "Futura-Light", "Futura Light", "Jost", sans-serif;
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #555555;
+            margin-bottom: 70px;
+        }
+
+        .sub-titles span {
+            display: inline-block;
+            margin: 0 12px;
+        }
+
+        /* Fließtext-Bereich */
         .section-text {
-            margin-bottom: 80px;
+            text-align: left;
+            max-width: 680px;
+            margin: 0 auto 80px auto;
             font-size: 1.05rem;
             color: #222222;
         }
@@ -87,24 +92,26 @@
             margin-bottom: 0.8rem;
         }
 
-        /* Slogan in Serif-Schrift */
+        /* Slogan */
         .tagline {
             text-align: center;
             font-family: "Cormorant Garamond", Georgia, serif;
-            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-size: clamp(2.2rem, 4.5vw, 3.5rem);
             font-weight: 300;
-            margin: 100px 0;
+            margin: 90px 0;
             color: #111111;
             letter-spacing: 0.02em;
         }
 
         .notice-text {
-            margin-top: 80px;
+            text-align: left;
+            max-width: 680px;
+            margin: 80px auto 0 auto;
             font-size: 0.95rem;
             color: #333333;
         }
 
-        /* Footer / Copyright ganz unten */
+        /* Footer ganz unten */
         footer {
             text-align: center;
             padding: 40px 20px 30px;
@@ -114,27 +121,34 @@
         }
 
         @media (max-width: 768px) {
-            .hero {
-                min-height: 320px;
-                padding-top: 40px;
+            .hero-banner {
+                height: 35vh;
+                min-height: 220px;
             }
             .content {
                 padding: 40px 24px 60px 24px;
+            }
+            .sub-titles span {
+                display: block;
+                margin: 6px 0;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header mit Bild & allen drei Überschriften -->
-    <header class="hero">
-        <img src="Header.png" alt="Header Hintergrund" class="hero-bg">
-        <h1 class="hero-title">Systems Thinking</h1>
+    <!-- Header-Bild ohne Text -->
+    <header class="hero-banner">
+        <img src="Header.png" alt="Header Hintergrund">
     </header>
 
     <!-- Inhaltsbereich -->
     <main class="content">
         
+        <!-- Große Überschrift unter dem Bild in Cormorant Garamond -->
+        <h1 class="main-title">Systems Thinking</h1>
+        
+
         <div class="section-text">
             <p>Systems Thinking beruht auf universellen Strukturprinzipien.</p>
             <p>Es lässt sich auf jedes System und jede Fragestellung anwenden sowie in unterschiedlichsten Bereichen flexibel abbilden.</p>
