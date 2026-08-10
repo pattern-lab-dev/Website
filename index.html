@@ -234,7 +234,7 @@
   // Blockiert Tastenkombinationen wie Strg/Cmd + C (Kopieren), A (Alles auswählen), X (Ausschneiden)
   document.addEventListener('keydown', e => {
     if ((e.ctrlKey || e.metaKey) && ['c', 'a', 'x'].includes(e.key.toLowerCase())) {
-      e.preventDefault();
+      e.preventDefault(); 
     }
   });
 </script>
