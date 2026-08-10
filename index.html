@@ -97,16 +97,40 @@
             opacity: 0.6;
         }
 
-        /* LINKSBÜNDIGER Slogan auf exakt derselben Linie */
+        /* LINKSBÜNDIGER Slogan */
         .tagline {
             text-align: left;
             font-family: "Cormorant Garamond", Georgia, serif;
             font-size: clamp(2.2rem, 4.8vw, 4.2rem); 
             font-weight: 300;
-            margin: 140px 0 80px 0; 
+            margin: 120px 0 100px 0; 
             color: #111111;
             letter-spacing: 0.02em;
             white-space: nowrap;
+        }
+
+        /* Zitatbereich ganz unten */
+        .quote-section {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            font-weight: 300;
+            color: #444444;
+            line-height: 1.7;
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+
+        .quote-text {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .quote-author {
+            font-family: "Futura-Light", "Futura Light", "Jost", sans-serif;
+            font-size: 0.8rem;
+            font-style: normal;
+            color: #777777;
+            letter-spacing: 0.05em;
         }
 
         /* Footer ganz unten */
@@ -131,7 +155,7 @@
                 margin-bottom: 30px;
             }
             .tagline {
-                margin: 90px 0 50px 0;
+                margin: 80px 0 60px 0;
                 white-space: normal;
             }
         }
@@ -141,7 +165,7 @@
 
     <!-- Header-Bild -->
     <header class="hero-banner">
-        <img src="Header.png" alt="Header Hintergrund">
+        <img src="Header_1.png" alt="Header Hintergrund">
     </header>
 
     <!-- Inhaltsbereich -->
@@ -150,21 +174,37 @@
         <!-- Überschrift -->
         <h1 class="main-title">Systems Thinking</h1>
 
-        <!-- Fließtext mit neuem Satz -->
+        <!-- Fließtext -->
         <div class="section-text">
             <p>Systems Thinking beruht auf universellen Strukturprinzipien.</p>
             <p>Es bildet die Basis für systemische Entwicklung und systemische Strategie – frei von kommerziellen Zwängen und flexibel auf unterschiedlichste Bereiche übertragbar.</p>
             <p>So kann man zum Beispiel zur Erkenntnis gelangen, dass es eine sehr gute Lösung ist, eine Webseite ins Netz zu stellen, obwohl keine benötigt wird.</p>
             
             <!-- Leiser Hinweis auf Medium -->
-            <p class="medium-link" 
-                Von Zeit zu Zeit teile ich den ein oder anderen Gedanken <a href="https://medium.com/@kristina-neureuther" target="_blank" rel="noopener">Medium-Archiv</a>.
+            <p class="medium-link">
+                Manchmal finden Sie eine Kleinigkeit zum Lesen von mir auf <a href="https://medium.com/@kristina-neureuther" target="_blank" rel="noopener">Medium</a>.
             </p>
         </div>
 
         <!-- Slogan -->
         <div class="tagline">
             Create Your Own Space.
+        </div>
+
+        <!-- Zitat ganz unten -->
+        <div class="quote-section">
+            <p class="quote-text">
+                »Viele Leute finden Zahlen wichtig.<br>
+                Dabei sind die total nebensächlich.<br>
+                Wenn sich neue Menschen begegnen,<br>
+                wollen viele leider nie das Wesentliche übereinander wissen.<br>
+                Die meisten von ihnen fragen sich nie:<br>
+                Was braucht dieser Mensch, um zu erkennen,<br>
+                dass in ihm ein Schmetterling schlummert?«
+            </p>
+            <p class="quote-author">
+                stark verändertes Zitat aus "Der kleine Prinz" von Antoine de Saint-Exupéry
+            </p>
         </div>
 
     </main>
