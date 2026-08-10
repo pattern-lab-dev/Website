@@ -115,32 +115,31 @@
             letter-spacing: 0.05em;
         }
 
-        /* Dezenter Medium Link mit reichlich Abstand vor dem Footer */
-        .medium-link {
-            margin-top: 100px;
-            margin-bottom: 20px;
-            font-size: 0.95rem;
-            color: #555555;
-        }
-
-        .medium-link a {
-            color: #111111;
-            text-decoration: underline;
-            text-underline-offset: 4px;
-            transition: opacity 0.2s ease;
-        }
-
-        .medium-link a:hover {
-            opacity: 0.6;
-        }
-
         /* Footer ganz unten */
         footer {
             text-align: center;
-            padding: 40px 20px 30px;
+            padding: 60px 20px 30px;
             font-size: 0.8rem;
             color: #888888;
             letter-spacing: 0.05em;
+        }
+
+        /* Medium Hinweis direkt im Footer */
+        .footer-medium {
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+            color: #555555;
+        }
+
+        .footer-medium a {
+            color: #111111;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: opacity 0.2s ease;
+        }
+
+        .footer-medium a:hover {
+            opacity: 0.6;
         }
 
         @media (max-width: 768px) {
@@ -158,9 +157,6 @@
             .tagline {
                 margin: 80px 0 60px 0;
                 white-space: normal;
-            }
-            .medium-link {
-                margin-top: 60px;
             }
         }
     </style>
@@ -206,16 +202,16 @@
             </p>
         </div>
 
-        <!-- Leiser Hinweis auf Medium kurz vor dem Footer -->
-        <p class="medium-link">
-            Manchmal finden Sie eine Kleinigkeit zum Lesen von mir auf <a href="https://medium.com/@kristina-neureuther" target="_blank" rel="noopener">Medium</a>.
-        </p>
-
     </main>
 
-    <!-- Footer mit Copyright -->
+    <!-- Footer mit Medium-Hinweis & Copyright -->
     <footer>
-        &copy; 2026 Kristina Neureuther
+        <p class="footer-medium">
+            Manchmal finden Sie eine Kleinigkeit zum Lesen von mir auf <a href="https://medium.com/@kristina-neureuther" target="_blank" rel="noopener">Medium</a>.
+        </p>
+        <div>
+            &copy; 2026 Kristina Neureuther
+        </div>
     </footer>
 
 </body>
