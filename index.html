@@ -28,7 +28,7 @@
             min-height: 100vh;
         }
 
-        /* Reines Bild ohne Text oben */
+        /* Reines Bild oben */
         .hero-banner {
             width: 100%;
             height: 45vh;
@@ -48,42 +48,29 @@
         .content {
             max-width: 850px;
             margin: 0 auto;
-            padding: 60px 20px 80px 20px;
+            /* Nach oben sehr nah ans Bild gezogen (20px) */
+            padding: 25px 20px 80px 20px;
             flex: 1;
             text-align: center;
         }
 
-        /* Neue Hauptüberschrift unter dem Bild in Cormorant Garamond */
+        /* Überschrift direkt unter dem Bild */
         .main-title {
             font-family: "Cormorant Garamond", Georgia, serif;
             font-size: clamp(2.8rem, 5.5vw, 4.8rem);
             font-weight: 300;
             letter-spacing: 0.02em;
             color: #111111;
-            margin-bottom: 10px;
-        }
-
-        /* Die weiteren Begriffe unter dem Titel */
-        .sub-titles {
-            font-family: "Futura-Light", "Futura Light", "Jost", sans-serif;
-            font-size: clamp(1.1rem, 2vw, 1.5rem);
-            font-weight: 300;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: #555555;
-            margin-bottom: 70px;
-        }
-
-        .sub-titles span {
-            display: inline-block;
-            margin: 0 12px;
+            margin-top: 0;
+            /* Viel Weißraum nach unten zum Text */
+            margin-bottom: 70px; 
         }
 
         /* Fließtext-Bereich */
         .section-text {
             text-align: left;
             max-width: 680px;
-            margin: 0 auto 80px auto;
+            margin: 0 auto;
             font-size: 1.05rem;
             color: #222222;
         }
@@ -92,23 +79,17 @@
             margin-bottom: 0.8rem;
         }
 
-        /* Slogan */
+        /* Grosser Slogan unten mit viel Weißraum */
         .tagline {
             text-align: center;
             font-family: "Cormorant Garamond", Georgia, serif;
-            font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+            /* Etwas größer gestaltet */
+            font-size: clamp(2.6rem, 5.5vw, 4.2rem); 
             font-weight: 300;
-            margin: 90px 0;
+            /* Großzügiger Weißraum oben und unten */
+            margin: 120px 0 100px 0; 
             color: #111111;
             letter-spacing: 0.02em;
-        }
-
-        .notice-text {
-            text-align: left;
-            max-width: 680px;
-            margin: 80px auto 0 auto;
-            font-size: 0.95rem;
-            color: #333333;
         }
 
         /* Footer ganz unten */
@@ -126,18 +107,20 @@
                 min-height: 220px;
             }
             .content {
-                padding: 40px 24px 60px 24px;
+                padding: 15px 24px 60px 24px;
             }
-            .sub-titles span {
-                display: block;
-                margin: 6px 0;
+            .main-title {
+                margin-bottom: 45px;
+            }
+            .tagline {
+                margin: 80px 0 60px 0;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header-Bild ohne Text -->
+    <!-- Header-Bild -->
     <header class="hero-banner">
         <img src="Header.png" alt="Header Hintergrund">
     </header>
@@ -145,16 +128,17 @@
     <!-- Inhaltsbereich -->
     <main class="content">
         
-        <!-- Große Überschrift unter dem Bild in Cormorant Garamond -->
+        <!-- Große Überschrift nah am Bild -->
         <h1 class="main-title">Systems Thinking</h1>
-        
 
+        <!-- Fließtext mit Weißraum davor -->
         <div class="section-text">
             <p>Systems Thinking beruht auf universellen Strukturprinzipien.</p>
             <p>Es lässt sich auf jedes System und jede Fragestellung anwenden sowie in unterschiedlichsten Bereichen flexibel abbilden.</p>
             <p>So kann man zum Beispiel zur Erkenntnis gelangen, dass es eine sehr gute Lösung ist, eine Webseite ins Netz zu stellen, obwohl keine benötigt wird.</p>
         </div>
 
+        <!-- Großer Slogan unten mit viel Weißraum -->
         <div class="tagline">
             Create Your Own Space.
         </div>
