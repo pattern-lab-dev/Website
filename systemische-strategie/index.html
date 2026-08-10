@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systemische Strategie</title>
+    
+    <meta name="description" content="Systemische Strategie.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            font-family: "Futura-Light", "Futura Light", "Jost", sans-serif;
+            font-weight: 300;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+
+            /* Verhindert das Markieren von Text per Maus */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .hero-banner {
+            width: 100%;
+            height: 40vh;
+            min-height: 250px;
+            overflow: hidden;
+        }
+
+        .hero-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center bottom;
+            display: block;
+        }
+
+        .content {
+            max-width: 720px;
+            width: 90%;
+            margin: 0 auto;
+            padding: 30px 0 60px 0;
+            flex: 1;
+            text-align: left;
+        }
+
+        .site-nav {
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        .site-nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #666666;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            transition: color 0.2s ease;
+        }
+
+        .site-nav a:hover,
+        .site-nav a.active {
+            color: #000000;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .main-title {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(2.5rem, 5.5vw, 4.8rem);
+            font-weight: 300;
+            letter-spacing: 0.02em;
+            color: #111111;
+            margin-top: 0;
+            margin-bottom: 40px; 
+        }
+
+        .section-text {
+            font-size: clamp(1rem, 1.5vw, 1.05rem);
+            color: #222222;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px 30px;
+            font-size: 0.8rem;
+            color: #888888;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-medium {
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+            color: #555555;
+        }
+
+        .footer-medium a {
+            color: #111111;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: opacity 0.2s ease;
+        }
+
+        .footer-medium a:hover {
+            opacity: 0.6;
+        }
+
+        @media (max-width: 768px) {
+            .hero-banner {
+                height: 30vh;
+                min-height: 200px;
+            }
+            .content {
+                width: 85%;
+                padding: 20px 0 40px 0;
+            }
+            .main-title {
+                margin-bottom: 30px;
+            }
+            .site-nav a {
+                display: inline-block;
+                margin-bottom: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header-Bild (Greift einen Ordner höher zu Header_1.png) -->
+    <header class="hero-banner">
+        <img src="../Header_1.png" alt="Header Hintergrund">
+    </header>
+
+    <!-- Inhaltsbereich -->
+    <main class="content">
+
+        <!-- Navigation -->
+        <nav class="site-nav">
+            <a href="/">Systems Thinking</a>
+            <a href="/systementwicklung">Systementwicklung</a>
+            <a href="/systemische-strategie" class="active">Systemische Strategie</a>
+        </nav>
+        
+        <!-- Überschrift -->
+        <h1 class="main-title">Systemische Strategie</h1>
+
+        <!-- Fließtext -->
+        <div class="section-text">
+            <p>Selbstverständlich werden Sie hier keinerlei Informationen finden.</p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer-medium">
+            Manchmal finden Sie eine Kleinigkeit zum Lesen auf <a href="https://medium.com/@kristina-neureuther" target="_blank" rel="noopener">Medium</a>.
+        </p>
+        <p class="footer-privacy" style="font-size: 0.75rem; color: #aaaaaa; margin-bottom: 6px;">
+            Diese Seite verwendet keine Cookies, kein Tracking und erhebt keine personenbezogenen Daten.
+        </p>
+        <div class="copyright">
+            &copy; 2026 Kristina Neureuther
+        </div>
+    </footer>
+
+    <!-- Kopierschutz-Script -->
+    <script>
+      document.addEventListener('contextmenu', e => e.preventDefault());
+      document.addEventListener('keydown', e => {
+        if ((e.ctrlKey || e.metaKey) && ['c', 'a', 'x'].includes(e.key.toLowerCase())) {
+          e.preventDefault(); 
+        }
+      });
+    </script>
+
+</body>
+</html>
