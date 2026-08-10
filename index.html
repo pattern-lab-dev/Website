@@ -28,7 +28,7 @@
             min-height: 100vh;
         }
 
-        /* Reines Bild oben */
+        /* Header-Bild oben */
         .hero-banner {
             width: 100%;
             height: 40vh;
@@ -46,15 +46,14 @@
 
         /* Hauptinhalt Container */
         .content {
-            max-width: 800px;
-            width: 100%;
+            max-width: 720px;
+            width: 90%;
             margin: 0 auto;
-            /* Sorgt für den sauberen Abstand zum linken und rechten Rand */
-            padding: 30px 10% 60px 10%; 
+            padding: 30px 0 60px 0;
             flex: 1;
         }
 
-        /* Überschrift direkt am Bild */
+        /* Linksbündige Überschrift bündig zum Text */
         .main-title {
             font-family: "Cormorant Garamond", Georgia, serif;
             font-size: clamp(2.5rem, 5.5vw, 4.8rem);
@@ -66,10 +65,10 @@
             margin-bottom: 40px; 
         }
 
-        /* Fließtext-Bereich */
+        /* Linksbündiger Fließtext */
         .section-text {
             text-align: left;
-            font-size: clamp(1rem, 1.5vw, 1.1rem);
+            font-size: clamp(1rem, 1.5vw, 1.05rem);
             color: #222222;
         }
 
@@ -77,13 +76,13 @@
             margin-bottom: 1.2rem;
         }
 
-        /* Slogan - Exakt auf derselben Linie eingerückt wie der Fließtext */
+        /* ZENTRIERTER Slogan unten mit viel Abstand */
         .tagline {
-            text-align: left;
+            text-align: center; /* Zentriert für Symmetrie */
             font-family: "Cormorant Garamond", Georgia, serif;
             font-size: clamp(2.2rem, 4.8vw, 4.2rem); 
             font-weight: 300;
-            margin: 130px 0 80px 0; 
+            margin: 140px 0 80px 0; 
             color: #111111;
             letter-spacing: 0.02em;
             white-space: nowrap;
@@ -104,13 +103,14 @@
                 min-height: 200px;
             }
             .content {
-                padding: 20px 24px 40px 24px;
+                width: 85%;
+                padding: 20px 0 40px 0;
             }
             .main-title {
                 margin-bottom: 30px;
             }
             .tagline {
-                margin: 80px 0 50px 0;
+                margin: 90px 0 50px 0;
                 white-space: normal;
             }
         }
@@ -126,17 +126,17 @@
     <!-- Inhaltsbereich -->
     <main class="content">
         
-        <!-- Große Überschrift -->
+        <!-- Linksbündig: Überschrift -->
         <h1 class="main-title">Systems Thinking</h1>
 
-        <!-- Fließtext -->
+        <!-- Linksbündig: Fließtext -->
         <div class="section-text">
             <p>Systems Thinking beruht auf universellen Strukturprinzipien.</p>
             <p>Es lässt sich auf jedes System und jede Fragestellung anwenden sowie in unterschiedlichsten Bereichen flexibel abbilden.</p>
             <p>So kann man zum Beispiel zur Erkenntnis gelangen, dass es eine sehr gute Lösung ist, eine Webseite ins Netz zu stellen, obwohl keine benötigt wird.</p>
         </div>
 
-        <!-- Slogan exakt bündig auf der gleichen Einrückungslinie -->
+        <!-- Zentriert: Slogan -->
         <div class="tagline">
             Create Your Own Space.
         </div>
