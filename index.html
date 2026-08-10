@@ -107,7 +107,7 @@
             margin-bottom: 1.2rem;
         }
 
-        /* LINKSBÜNDIGER Slogan */
+        /* LINKSBÜNDIGER Slogan (in Garamond) */
         .tagline {
             text-align: left;
             font-family: "Cormorant Garamond", Georgia, serif;
@@ -197,7 +197,7 @@
 
     <!-- Header-Bild -->
     <header class="hero-banner">
-        <img src="Header_1.png" alt="Header Hintergrund">
+        <img src="/Header_1.png" alt="Header Hintergrund">
     </header>
 
     <!-- Inhaltsbereich -->
@@ -206,8 +206,8 @@
         <!-- Navigation -->
         <nav class="site-nav">
             <a href="/" class="active">Systems Thinking</a>
-            <a href="/Systementwicklung">Systementwicklung</a>
-            <a href="/systemische-strategie">Systemische Strategie</a>
+            <a href="/Systementwicklung/">Systementwicklung</a>
+            <a href="/systemische-strategie/">Systemische Strategie</a>
         </nav>
         
         <!-- Überschrift -->
@@ -220,6 +220,10 @@
             <p>So kann man zum Beispiel zur Erkenntnis gelangen, dass es eine sehr gute Lösung ist, eine Webseite ins Netz zu stellen, obwohl diese überhaupt nicht benötigt wird.</p>
         </div>
 
+        <!-- Slogan in Garamond -->
+        <div class="tagline">
+            Create Your Own Space.
+        </div>
 
         <!-- Zitat -->
         <div class="quote-section">
@@ -228,7 +232,7 @@
                 Dabei sind die total nebensächlich.<br>
                 Wenn sich neue Menschen begegnen,<br>
                 wollen viele leider nie das Wesentliche wissen.<br>
-                Die meisten von ihnen fragen sich nie:<br>
+                Die meiste von ihnen fragen sich nie:<br>
                 Was braucht dieser Mensch, um zu erkennen,<br>
                 dass in ihm ein Schmetterling schlummert?«
             </p>
@@ -254,10 +258,7 @@
 
     <!-- Kopierschutz-Script -->
     <script>
-      // Deaktiviert den Rechtsklick (Kontextmenü)
       document.addEventListener('contextmenu', e => e.preventDefault());
-
-      // Blockiert Tastenkombinationen wie Strg/Cmd + C (Kopieren), A (Alles auswählen), X (Ausschneiden)
       document.addEventListener('keydown', e => {
         if ((e.ctrlKey || e.metaKey) && ['c', 'a', 'x'].includes(e.key.toLowerCase())) {
           e.preventDefault(); 
