@@ -44,50 +44,45 @@
             display: block;
         }
 
-        /* Hauptinhalt */
+        /* Hauptinhalt Container */
         .content {
-            max-width: 850px;
+            max-width: 700px; /* Einheitliche Breite für absolute Symmetrie */
+            width: 100%;
             margin: 0 auto;
-            /* Nach oben sehr nah ans Bild gezogen (20px) */
-            padding: 25px 20px 80px 20px;
+            padding: 30px 20px 80px 20px; /* Minimaler Abstand nach oben zum Bild */
             flex: 1;
-            text-align: center;
         }
 
-        /* Überschrift direkt unter dem Bild */
+        /* Große Überschrift direkt am Bild */
         .main-title {
             font-family: "Cormorant Garamond", Georgia, serif;
             font-size: clamp(2.8rem, 5.5vw, 4.8rem);
             font-weight: 300;
             letter-spacing: 0.02em;
             color: #111111;
+            text-align: left; /* Linksbündig für perfekte Kante mit dem Text */
             margin-top: 0;
-            /* Viel Weißraum nach unten zum Text */
-            margin-bottom: 70px; 
+            margin-bottom: 100px; /* Deutlich mehr Abstand nach unten zum Fließtext */
         }
 
         /* Fließtext-Bereich */
         .section-text {
             text-align: left;
-            max-width: 680px;
-            margin: 0 auto;
             font-size: 1.05rem;
             color: #222222;
         }
 
         .section-text p {
-            margin-bottom: 0.8rem;
+            margin-bottom: 1.2rem;
         }
 
         /* Grosser Slogan unten mit viel Weißraum */
         .tagline {
             text-align: center;
             font-family: "Cormorant Garamond", Georgia, serif;
-            /* Etwas größer gestaltet */
             font-size: clamp(2.6rem, 5.5vw, 4.2rem); 
             font-weight: 300;
-            /* Großzügiger Weißraum oben und unten */
-            margin: 120px 0 100px 0; 
+            margin: 140px 0 100px 0; 
             color: #111111;
             letter-spacing: 0.02em;
         }
@@ -107,13 +102,13 @@
                 min-height: 220px;
             }
             .content {
-                padding: 15px 24px 60px 24px;
+                padding: 20px 24px 60px 24px;
             }
             .main-title {
-                margin-bottom: 45px;
+                margin-bottom: 60px;
             }
             .tagline {
-                margin: 80px 0 60px 0;
+                margin: 90px 0 60px 0;
             }
         }
     </style>
@@ -128,17 +123,17 @@
     <!-- Inhaltsbereich -->
     <main class="content">
         
-        <!-- Große Überschrift nah am Bild -->
+        <!-- Große Überschrift direkt nah am Bild & bündig zum Text -->
         <h1 class="main-title">Systems Thinking</h1>
 
-        <!-- Fließtext mit Weißraum davor -->
+        <!-- Fließtext mit reichlich Abstand zur Überschrift -->
         <div class="section-text">
             <p>Systems Thinking beruht auf universellen Strukturprinzipien.</p>
             <p>Es lässt sich auf jedes System und jede Fragestellung anwenden sowie in unterschiedlichsten Bereichen flexibel abbilden.</p>
             <p>So kann man zum Beispiel zur Erkenntnis gelangen, dass es eine sehr gute Lösung ist, eine Webseite ins Netz zu stellen, obwohl keine benötigt wird.</p>
         </div>
 
-        <!-- Großer Slogan unten mit viel Weißraum -->
+        <!-- Großer Slogan unten -->
         <div class="tagline">
             Create Your Own Space.
         </div>
