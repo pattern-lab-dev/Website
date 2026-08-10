@@ -91,15 +91,28 @@
             margin-bottom: 40px; 
         }
 
-        /* Normale Schriftart (wie Fließtext) */
-        .tagline-normal {
-            text-align: left;
-            font-family: "Futura-Light", "Futura Light", "Jost", sans-serif;
-            font-size: clamp(1.2rem, 2.5vw, 1.8rem); 
+        /* Zitatbereich */
+        .quote-section {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(1.4rem, 2.5vw, 2rem);
             font-weight: 300;
-            margin: 40px 0 60px 0; 
             color: #111111;
-            letter-spacing: 0.03em;
+            line-height: 1.5;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .quote-text {
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+
+        .quote-author {
+            font-family: "Futura-Light", "Futura Light", "Jost", sans-serif; 
+            font-size: 0.85rem;
+            font-style: normal;
+            color: #777777;
+            letter-spacing: 0.05em;
         }
 
         footer {
@@ -139,9 +152,6 @@
             .main-title {
                 margin-bottom: 30px;
             }
-            .tagline-normal {
-                margin: 30px 0 40px 0;
-            }
             .site-nav a {
                 display: inline-block;
                 margin-bottom: 8px;
@@ -169,9 +179,14 @@
         <!-- Überschrift -->
         <h1 class="main-title">Systementwicklung</h1>
 
-        <!-- Slogan in normaler Schriftart -->
-        <div class="tagline-normal">
-            Create Your Own Space.
+        <!-- Zitat -->
+        <div class="quote-section">
+            <p class="quote-text">
+                »Think for yourself.«
+            </p>
+            <p class="quote-author">
+                Yoko Ono
+            </p>
         </div>
 
     </main>
