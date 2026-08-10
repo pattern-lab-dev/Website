@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Systems Thinking | Kristina Neureuther</title>
     
-<!-- Meta-Beschreibung für Google -->
-    <meta name="description" content="Systems Thinking, Systementwicklung und Systemische Strategie – Kristina Neureuther.">
-    
+    <!-- Meta-Beschreibung für Google -->
+    <meta name="description" content="Systems Thinking, systemische Entwicklung und systemische Strategie – Kristina Neureuther.">
+
     <!-- Google Fonts: Jost & Cormorant Garamond Light -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,14 +48,14 @@
             display: block;
         }
 
-        /* Hauptinhalt Container: Legt die gemeinsame linke Kante fest */
+        /* Hauptinhalt Container */
         .content {
             max-width: 720px;
             width: 90%;
             margin: 0 auto;
             padding: 30px 0 60px 0;
             flex: 1;
-            text-align: left; /* Garantiert linksbündige Ausrichtung für alle Kinder */
+            text-align: left;
         }
 
         /* Linksbündige Überschrift */
@@ -79,9 +79,27 @@
             margin-bottom: 1.2rem;
         }
 
-        /* LINKSBÜNDIGER Slogan auf exakt derselben Linie wie Überschrift & Text */
+        /* Dezentes Gedanken-Archiv / Medium Link */
+        .medium-link {
+            margin-top: 2rem;
+            font-size: 0.95rem;
+            color: #555555;
+        }
+
+        .medium-link a {
+            color: #111111;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            transition: opacity 0.2s ease;
+        }
+
+        .medium-link a:hover {
+            opacity: 0.6;
+        }
+
+        /* LINKSBÜNDIGER Slogan auf exakt derselben Linie */
         .tagline {
-            text-align: left; /* Zwingend linksbündig */
+            text-align: left;
             font-family: "Cormorant Garamond", Georgia, serif;
             font-size: clamp(2.2rem, 4.8vw, 4.2rem); 
             font-weight: 300;
@@ -123,23 +141,28 @@
 
     <!-- Header-Bild -->
     <header class="hero-banner">
-        <img src="Header_1.png" alt="Header Hintergrund">
+        <img src="Header.png" alt="Header Hintergrund">
     </header>
 
-    <!-- Inhaltsbereich (alle 3 Elemente auf 1 Kante) -->
+    <!-- Inhaltsbereich -->
     <main class="content">
         
-        <!-- 1. Überschrift -->
+        <!-- Überschrift -->
         <h1 class="main-title">Systems Thinking</h1>
 
-        <!-- 2. Fließtext -->
+        <!-- Fließtext mit neuem Satz -->
         <div class="section-text">
             <p>Systems Thinking beruht auf universellen Strukturprinzipien.</p>
-            <p>Es lässt sich auf jedes System und jede Fragestellung anwenden sowie in unterschiedlichsten Bereichen flexibel abbilden.</p>
+            <p>Es bildet die Basis für systemische Entwicklung und systemische Strategie – frei von kommerziellen Zwängen und flexibel auf unterschiedlichste Bereiche übertragbar.</p>
             <p>So kann man zum Beispiel zur Erkenntnis gelangen, dass es eine sehr gute Lösung ist, eine Webseite ins Netz zu stellen, obwohl keine benötigt wird.</p>
+            
+            <!-- Leiser Hinweis auf Medium -->
+            <p class="medium-link" 
+                Von Zeit zu Zeit teile ich den ein oder anderen Gedanken <a href="https://medium.com/@kristina-neureuther" target="_blank" rel="noopener">Medium-Archiv</a>.
+            </p>
         </div>
 
-        <!-- 3. Slogan auf exakt derselben linken Linie -->
+        <!-- Slogan -->
         <div class="tagline">
             Create Your Own Space.
         </div>
