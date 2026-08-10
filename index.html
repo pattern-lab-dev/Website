@@ -217,5 +217,27 @@
     </div>
 </footer>
 
+    <style>
+  /* Verhindert das Markieren von Text mit der Maus auf der gesamten Seite */
+  body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+</style>
+
+<script>
+  // Deaktiviert den Rechtsklick (Kontextmenü)
+  document.addEventListener('contextmenu', e => e.preventDefault());
+
+  // Blockiert Tastenkombinationen wie Strg/Cmd + C (Kopieren), A (Alles auswählen), X (Ausschneiden)
+  document.addEventListener('keydown', e => {
+    if ((e.ctrlKey || e.metaKey) && ['c', 'a', 'x'].includes(e.key.toLowerCase())) {
+      e.preventDefault();
+    }
+  });
+</script>
+
 </body>
 </html>
