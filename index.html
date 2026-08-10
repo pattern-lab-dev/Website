@@ -44,30 +44,29 @@
             display: block;
         }
 
-        /* Hauptinhalt Container */
+        /* Hauptinhalt Container: Legt die gemeinsame linke Kante fest */
         .content {
             max-width: 720px;
             width: 90%;
             margin: 0 auto;
             padding: 30px 0 60px 0;
             flex: 1;
+            text-align: left; /* Garantiert linksbündige Ausrichtung für alle Kinder */
         }
 
-        /* Linksbündige Überschrift bündig zum Text */
+        /* Linksbündige Überschrift */
         .main-title {
             font-family: "Cormorant Garamond", Georgia, serif;
             font-size: clamp(2.5rem, 5.5vw, 4.8rem);
             font-weight: 300;
             letter-spacing: 0.02em;
             color: #111111;
-            text-align: left;
             margin-top: 0;
             margin-bottom: 40px; 
         }
 
         /* Linksbündiger Fließtext */
         .section-text {
-            text-align: left;
             font-size: clamp(1rem, 1.5vw, 1.05rem);
             color: #222222;
         }
@@ -76,9 +75,9 @@
             margin-bottom: 1.2rem;
         }
 
-        /* ZENTRIERTER Slogan unten mit viel Abstand */
+        /* LINKSBÜNDIGER Slogan auf exakt derselben Linie wie Überschrift & Text */
         .tagline {
-            text-align: center; /* Zentriert für Symmetrie */
+            text-align: left; /* Zwingend linksbündig */
             font-family: "Cormorant Garamond", Georgia, serif;
             font-size: clamp(2.2rem, 4.8vw, 4.2rem); 
             font-weight: 300;
@@ -123,20 +122,20 @@
         <img src="Header_1.png" alt="Header Hintergrund">
     </header>
 
-    <!-- Inhaltsbereich -->
+    <!-- Inhaltsbereich (alle 3 Elemente auf 1 Kante) -->
     <main class="content">
         
-        <!-- Linksbündig: Überschrift -->
+        <!-- 1. Überschrift -->
         <h1 class="main-title">Systems Thinking</h1>
 
-        <!-- Linksbündig: Fließtext -->
+        <!-- 2. Fließtext -->
         <div class="section-text">
             <p>Systems Thinking beruht auf universellen Strukturprinzipien.</p>
             <p>Es lässt sich auf jedes System und jede Fragestellung anwenden sowie in unterschiedlichsten Bereichen flexibel abbilden.</p>
             <p>So kann man zum Beispiel zur Erkenntnis gelangen, dass es eine sehr gute Lösung ist, eine Webseite ins Netz zu stellen, obwohl keine benötigt wird.</p>
         </div>
 
-        <!-- Zentriert: Slogan -->
+        <!-- 3. Slogan auf exakt derselben linken Linie -->
         <div class="tagline">
             Create Your Own Space.
         </div>
