@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Systems Thinking | Kristina Neureuther</title>
     <!-- Google Fonts: Jost & Cormorant Garamond Light -->
@@ -31,8 +31,8 @@
         /* Reines Bild oben */
         .hero-banner {
             width: 100%;
-            height: 45vh;
-            min-height: 300px;
+            height: 40vh;
+            min-height: 250px;
             overflow: hidden;
         }
 
@@ -46,30 +46,30 @@
 
         /* Hauptinhalt Container */
         .content {
-            max-width: 700px;
+            max-width: 800px;
             width: 100%;
             margin: 0 auto;
-            padding: 30px 20px 60px 20px;
+            /* Sorgt für den sauberen Abstand zum linken und rechten Rand */
+            padding: 30px 10% 60px 10%; 
             flex: 1;
         }
 
         /* Überschrift direkt am Bild */
         .main-title {
             font-family: "Cormorant Garamond", Georgia, serif;
-            font-size: clamp(2.8rem, 5.5vw, 4.8rem);
+            font-size: clamp(2.5rem, 5.5vw, 4.8rem);
             font-weight: 300;
             letter-spacing: 0.02em;
             color: #111111;
             text-align: left;
             margin-top: 0;
-            /* Abstand zum Textblock verringert (vorher 100px) */
-            margin-bottom: 50px; 
+            margin-bottom: 40px; 
         }
 
         /* Fließtext-Bereich */
         .section-text {
             text-align: left;
-            font-size: 1.05rem;
+            font-size: clamp(1rem, 1.5vw, 1.1rem);
             color: #222222;
         }
 
@@ -77,19 +77,16 @@
             margin-bottom: 1.2rem;
         }
 
-        /* Slogan unten in einer Zeile */
+        /* Slogan - Exakt auf derselben Linie eingerückt wie der Fließtext */
         .tagline {
-            text-align: center;
+            text-align: left;
             font-family: "Cormorant Garamond", Georgia, serif;
-            /* Schriftgröße minimal angepasst */
-            font-size: clamp(2rem, 4.2vw, 3.6rem); 
+            font-size: clamp(2.2rem, 4.8vw, 4.2rem); 
             font-weight: 300;
-            /* Erhöhter Abstand oben zieht das Element weiter nach unten */
-            margin: 160px 0 80px 0; 
+            margin: 130px 0 80px 0; 
             color: #111111;
             letter-spacing: 0.02em;
-            /* Verhindert Zeilenumbruch auf größeren Bildschirmen */
-            white-space: nowrap; 
+            white-space: nowrap;
         }
 
         /* Footer ganz unten */
@@ -103,19 +100,18 @@
 
         @media (max-width: 768px) {
             .hero-banner {
-                height: 35vh;
-                min-height: 220px;
+                height: 30vh;
+                min-height: 200px;
             }
             .content {
                 padding: 20px 24px 40px 24px;
             }
             .main-title {
-                margin-bottom: 35px;
+                margin-bottom: 30px;
             }
             .tagline {
-                margin: 90px 0 50px 0;
-                /* Auf mobilen Displays Zeilenumbruch erlauben, damit nichts abgeschnitten wird */
-                white-space: normal; 
+                margin: 80px 0 50px 0;
+                white-space: normal;
             }
         }
     </style>
@@ -133,14 +129,14 @@
         <!-- Große Überschrift -->
         <h1 class="main-title">Systems Thinking</h1>
 
-        <!-- Näher an die Überschrift gerückter Textblock -->
+        <!-- Fließtext -->
         <div class="section-text">
             <p>Systems Thinking beruht auf universellen Strukturprinzipien.</p>
             <p>Es lässt sich auf jedes System und jede Fragestellung anwenden sowie in unterschiedlichsten Bereichen flexibel abbilden.</p>
             <p>So kann man zum Beispiel zur Erkenntnis gelangen, dass es eine sehr gute Lösung ist, eine Webseite ins Netz zu stellen, obwohl keine benötigt wird.</p>
         </div>
 
-        <!-- Weiter unten platzierter Slogan in 1 Zeile -->
+        <!-- Slogan exakt bündig auf der gleichen Einrückungslinie -->
         <div class="tagline">
             Create Your Own Space.
         </div>
