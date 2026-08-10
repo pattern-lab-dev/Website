@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Systems Thinking</title>
-    <!-- Google Fonts: Jost als perfekter Fallback für Futura Light -->
+    <title>Systems Thinking | Kristina Neureuther</title>
+    <!-- Google Fonts: Jost als Fallback für Futura Light -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
@@ -23,39 +23,58 @@
             font-weight: 300;
             line-height: 1.8;
             -webkit-font-smoothing: antialiased;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        /* Bannerbereich oben mit dem Blütenbild */
+        /* Hero Banner Container */
         .hero {
             position: relative;
             width: 100%;
-            height: 60vh;
-            min-height: 400px;
-            /* Ersetze 'blumen-hintergrund.jpg' mit deinem Dateinamen */
-            background-image: url('./Header.png'); 
-            background-size: cover;
-            background-position: center bottom;
+            min-height: 380px;
+            overflow: hidden;
             display: flex;
-            justify-content: center;
-            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
             padding-top: 60px;
+            padding-bottom: 40px;
+            background-color: #72a3be; /* Blau-Ton als Ausweichfarbe falls Bild lädt */
         }
 
-        /* Überschrift im Bild */
+        /* Das eigentliche Hintergrundbild */
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center bottom;
+            z-index: 1;
+        }
+
+        /* Überschriften über dem Bild */
         .hero-title {
+            position: relative;
+            z-index: 2;
             color: #ffffff;
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-size: clamp(2rem, 4.5vw, 3.8rem);
             font-weight: 200;
             letter-spacing: 0.05em;
             text-align: center;
             font-family: "Futura-Light", "Futura Light", "Jost", sans-serif;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.15);
         }
 
         /* Hauptinhalt unter dem Bild */
         .content {
             max-width: 800px;
             margin: 0 auto;
-            padding: 80px 20px 120px 20px;
+            padding: 80px 20px 60px 20px;
+            flex: 1;
         }
 
         .section-text {
@@ -68,7 +87,7 @@
             margin-bottom: 0.8rem;
         }
 
-        /* Slogan in Serif-Schrift ähnlich dem Screenshot */
+        /* Slogan in Serif-Schrift */
         .tagline {
             text-align: center;
             font-family: "Cormorant Garamond", Georgia, serif;
@@ -85,21 +104,31 @@
             color: #333333;
         }
 
+        /* Footer / Copyright ganz unten */
+        footer {
+            text-align: center;
+            padding: 40px 20px 30px;
+            font-size: 0.8rem;
+            color: #888888;
+            letter-spacing: 0.05em;
+        }
+
         @media (max-width: 768px) {
             .hero {
-                height: 45vh;
+                min-height: 320px;
                 padding-top: 40px;
             }
             .content {
-                padding: 40px 24px 80px 24px;
+                padding: 40px 24px 60px 24px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header-Bereich mit Bild und Haupttitel -->
+    <!-- Header mit Bild & allen drei Überschriften -->
     <header class="hero">
+        <img src="Header.png" alt="Header Hintergrund" class="hero-bg">
         <h1 class="hero-title">Systems Thinking</h1>
     </header>
 
@@ -116,8 +145,12 @@
             Create Your Own Space.
         </div>
 
-
     </main>
+
+    <!-- Footer mit Copyright -->
+    <footer>
+        &copy; 2026 Kristina Neureuther
+    </footer>
 
 </body>
 </html>
