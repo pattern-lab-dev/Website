@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristina Neureuther - Systemtheorie</title>
+    
+    <!-- Meta-Beschreibung für Google -->
+    <meta name="description" content="Systems Thinking, systemische Entwicklung, systemische Strategie und umfassendes Systemtheorie Lexikon – Kristina Neureuther.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google Fonts: Jost & Cormorant Garamond Light -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+    
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            font-family: "Futura-Light", "Futura Light", "Jost", sans-serif;
+            font-weight: 300;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+
+            /* Verhindert das Markieren von Text per Maus */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Header-Bild oben */
+        .hero-banner {
+            width: 100%;
+            height: 40vh;
+            min-height: 250px;
+            overflow: hidden;
+        }
+
+        .hero-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center bottom;
+            display: block;
+        }
+
+        /* Hauptinhalt Container */
+        .content {
+            max-width: 720px;
+            width: 90%;
+            margin: 0 auto;
+            padding: 30px 0 60px 0;
+            flex: 1;
+            text-align: left;
+        }
+
+        /* Navigation */
+        .site-nav {
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        .site-nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #666666;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            transition: color 0.2s ease;
+        }
+
+        .site-nav a:hover,
+        .site-nav a.active {
+            color: #000000;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        /* Linksbündige Überschrift */
+        .main-title {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(2.5rem, 5.5vw, 4.8rem);
+            font-weight: 300;
+            letter-spacing: 0.02em;
+            color: #111111;
+            margin-top: 0;
+            margin-bottom: 40px; 
+        }
+
+        /* Linksbündiger Fließtext */
+        .section-text {
+            font-size: clamp(1rem, 1.5vw, 1.05rem);
+            color: #222222;
+        }
+
+        .section-text p {
+            margin-bottom: 1.2rem;
+        }
+
+        /* Zitatbereich */
+        .quote-section {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            font-weight: 300;
+            color: #444444;
+            line-height: 1.7;
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+
+        .quote-text {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .quote-author {
+            font-family: "Futura-Light", "Futura Light", "Jost", sans-serif; 
+            font-size: 0.8rem;
+            font-style: normal;
+            color: #777777;
+            letter-spacing: 0.05em;
+        }
+
+        /* Sektion für das Systemtheorie Lexikon */
+        .lexicon-section {
+            margin-top: 80px;
+            padding-top: 60px;
+            border-top: 1px solid #eeeeee;
+        }
+
+        .lexicon-title {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 300;
+            color: #111111;
+            margin-bottom: 15px;
+        }
+
+        .lexicon-intro {
+            font-size: 0.95rem;
+            color: #666666;
+            margin-bottom: 40px;
+        }
+
+        .lexicon-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .lexicon-item {
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .lexicon-item:last-child {
+            border-bottom: none;
+        }
+
+        .lexicon-term {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #111111;
+            margin-bottom: 6px;
+        }
+
+        .lexicon-definition {
+            font-size: 0.95rem;
+            color: #333333;
+            line-height: 1.7;
+        }
+
+        /* LINKSBÜNDIGER Slogan (in Garamond) */
+        .tagline {
+            text-align: left;
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(2.2rem, 4.8vw, 4.2rem); 
+            font-weight: 300;
+            margin: 100px 0 60px 0; 
+            color: #111111;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+        }
+
+        /* Footer ganz unten */
+        footer {
+            text-align: center;
+            padding: 60px 20px 30px;
+            font-size: 0.8rem;
+            color: #888888;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-privacy {
+            font-size: 0.75rem;
+            color: #aaaaaa;
+            margin-bottom: 6px;
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            color: #888888;
+        }
+
+        @media (max-width: 768px) {
+            .hero-banner {
+                height: 30vh;
+                min-height: 200px;
+            }
+            .content {
+                width: 85%;
+                padding: 20px 0 40px 0;
+            }
+            .main-title {
+                margin-bottom: 30px;
+            }
+            .tagline {
+                margin: 60px 0 40px 0;
+                white-space: normal;
+            }
+            .site-nav a {
+                display: inline-block;
+                margin-bottom: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header-Bild -->
+    <header class="hero-banner">
+        <img src="/Header_1.png" alt="Header Hintergrund">
+    </header>
+
+    <!-- Inhaltsbereich -->
+    <main class="content">
+
+        <!-- Navigation -->
+        <nav class="site-nav">
+            <a href="/" class="active">Systems Thinking</a>
+            <a href="/Systementwicklung/">Systementwicklung</a>
+            <a href="/systemische-strategie/">Systemische Strategie</a>
+        </nav>
+        
+        <!-- Überschrift -->
+        <h1 class="main-title">Systemtheorie</h1>
+
+
+       
+
+        <!-- Systemtheorie Lexikon Sektion -->
+        <section id="lexikon" class="lexicon-section">
+            <h2 class="lexicon-title">Lexikon zur Systemtheorie</h2>
+            <p class="lexicon-intro">Eine strukturierte Sammlung grundlegender Begriffe, Konzepte und Definitionen aus der soziologischen und allgemeinen Systemtheorie – zusammengestellt von Kristina Neureuther.</p>
+
+            <div class="lexicon-grid">
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">1. System</h3>
+                    <p class="lexicon-definition">Ein System ist ein durch Grenzen von seiner Umwelt abgegrenzter Zusammenhang von Elementen. Es zeichnet sich durch Binnenstrukturen und spezifische Operationsweisen aus.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">2. Umwelt</h3>
+                    <p class="lexicon-definition">Die Umwelt umfasst alles, was nicht zum System gehört. Jedes System setzt eine Umwelt voraus, gegen die es sich abgrenzt und auf deren Komplexität es reagiert.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">3. Autopoiesis</h3>
+                    <p class="lexicon-definition">Die Eigenschaft von Systemen, sich selbst aus ihren eigenen Elementen zu erzeugen und zu reproduzieren. Autopoietische Systeme sind operational geschlossen.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">4. Operationale Geschlossenheit</h3>
+                    <p class="lexicon-definition">Ein System verwendet ausschließlich seine eigenen Operationen, um weitere eigene Operationen zu erzeugen. Es kann nicht direkt von außen gesteuert werden.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">5. Kognitive Offenheit</h3>
+                    <p class="lexicon-definition">Trotz operationaler Geschlossenheit ist ein System informatorisch offen für die Umwelt. Es verarbeitet Umweltreize jedoch ausschließlich nach eigenen Regeln.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">6. Komplexität</h3>
+                    <p class="lexicon-definition">Die Gesamtheit aller möglichen Zustände und Verbindungen eines Systems oder seiner Umwelt. Da die Umwelt stets komplexer ist als das System, muss das System Komplexität reduzieren.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">7. Komplexitätsreduktion</h3>
+                    <p class="lexicon-definition">Der Prozess, durch den ein System die unendliche Vielfalt der Umweltzustände auf verarbeitbare interne Strukturen und Entscheidungen herunterbricht.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">8. Element</h3>
+                    <p class="lexicon-definition">Die kleinste, nicht weiter teilbare Einheit innerhalb eines Systems. Was als Element gilt, wird vom System selbst bestimmt (z. B. Kommunikationen in sozialen Systemen).</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">9. Struktur</h3>
+                    <p class="lexicon-definition">Die Zuordnung und Verdichtung von Beziehungen zwischen den Elementen eines Systems. Strukturen schränken ein, welche Operationen als Nächstes folgen können.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">10. Kommunikation</h3>
+                    <p class="lexicon-definition">Die grundlegende Operation sozialer Systeme. Sie besteht aus der Synthese von drei Selektionen: Information, Mitteilung und Verstehen.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">11. Information</h3>
+                    <p class="lexicon-definition">Eine Selektion aus einem Horizont von Möglichkeiten. Information ist eine Differenz, die einen Unterschied im System macht.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">12. Mitteilung</h3>
+                    <p class="lexicon-definition">Das Verhalten oder das Medium, durch das eine Information an ein anderes System adressiert wird.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">13. Verstehen</h3>
+                    <p class="lexicon-definition">Die Unterscheidung zwischen der Information und der Mitteilung durch den Empfänger. Ohne Verstehen kommt keine Kommunikation zustande.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">14. Doppelter Bindungsüberschuss (Double Bind)</h3>
+                    <p class="lexicon-definition">Eine Konstellation, in der zwei verknüpfte Erwartungen oder Handlungsaufforderungen sich widersprechen und das System in eine Blockade führen.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">15. Doppelte Kontingenz</h3>
+                    <p class="lexicon-definition">Die Grundkonstellation sozialer Systeme: Zwei Akteure stehen sich gegenüber, deren Verhalten für den jeweils anderen unvorhersehbar (kontingent) ist. Unruhe erzeugt Ordnung.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">16. Kontingenz</h3>
+                    <p class="lexicon-definition">Bezeichnet etwas, das weder notwendig noch unmöglich ist. Es könnte auch anders sein, als es aktuell ist.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">17. Binärer Code</h3>
+                    <p class="lexicon-definition">Das leitende Unterscheidungspaar eines Funktionssystems, mit dem alle Ereignisse verarbeitet werden (z. B. Recht/Unrecht im Rechtssystem, Zahlen/Nicht-Zahlen in der Wirtschaft).</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">18. Programmentwicklung / Programme</h3>
+                    <p class="lexicon-definition">Spezifische Bedingungen und Regeln, die festlegen, wann der positive oder negative Wert des binären Codes zugeteilt wird (z. B. Gesetze im Rechtssystem).</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">19. Funktionale Differenzierung</h3>
+                    <p class="lexicon-definition">Die Ausdifferenzierung der modernen Gesellschaft in gleichrangige Teilsysteme (Wirtschaft, Politik, Wissenschaft, Recht), die jeweils eine spezifische Funktion erfüllen.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">20. Interpenetration</h3>
+                    <p class="lexicon-definition">Das Verhältnis von Systemen, die sich gegenseitig ihre eigene Komplexität zur Verfügung stellen, ohne ihre eigene Systemgrenze aufzugeben.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">21. Resonanz</h3>
+                    <p class="lexicon-definition">Die Art und Weise, wie ein System auf Veränderungen oder Reize aus der Umwelt in seinen eigenen Strukturen reagiert.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">22. Perturbation (Störung)</h3>
+                    <p class="lexicon-definition">Ein Impuls aus der Umwelt, der ein System nicht direkt steuert, aber Anlass für interne Systemveränderungen oder Reaktionen gibt.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">23. Strukturelle Kopplung</h3>
+                    <p class="lexicon-definition">Eine dauerhafte Beziehung zwischen einem System und seiner Umwelt, die festlegt, für welche Umweltereignisse das System eine hohe Sensibilität entwickelt.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">24. Selbstreferenz</h3>
+                    <p class="lexicon-definition">Die Fähigkeit eines Systems, sich in seinen Operationen auf sich selbst, seine eigenen Elemente oder seine eigenen Strukturen zu beziehen.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">25. Fremdreferenz</h3>
+                    <p class="lexicon-definition">Der Bezug einer systeminternen Operation auf die Umwelt des Systems zur Orientierung und Abgrenzung.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">26. Beobachtung</h3>
+                    <p class="lexicon-definition">Die Handhabung einer Unterscheidung, um eine Seite der Unterscheidung zu bezeichnen.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">27. Beobachter erster Ordnung</h3>
+                    <p class="lexicon-definition">Ein Beobachter, der Gegenstände oder Ereignisse direkt bezeichnet, ohne die von ihm genutzte Unterscheidung selbst zu reflektieren.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">28. Beobachter zweiter Ordnung</h3>
+                    <p class="lexicon-definition">Ein Beobachter, der andere Beobachter dabei beobachtet, wie sie Unterscheidungen treffen (das "Wie" des Beobachtens).</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">29. Blinder Fleck</h3>
+                    <p class="lexicon-definition">Der Unterscheidungsrahmen, den ein Beobachter nutzt, um etwas zu beobachten, den er aber während des Beobachtens selbst nicht sehen kann.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">30. Re-entry (Wiedereintritt)</h3>
+                    <p class="lexicon-definition">Der Eintritt einer Unterscheidung in das durch sie selbst Unterschiedene. Ein System führt die Grenze zwischen sich und der Umwelt wieder in sich selbst ein.</p>
+                </article>
+            </div>
+      
+
+
+    </main>
+
+    <!-- Footer mit Datenschutz-Hinweis & Copyright -->
+    <footer>
+        <p class="footer-privacy">
+            Diese Seite verwendet keine Cookies, kein Tracking und erhebt keine personenbezogenen Daten.
+        </p>
+        
+        <div class="copyright">
+            &copy; 2026 Kristina Neureuther &middot; Private Website
+        </div>
+    </footer>
+
+    <!-- Kopierschutz-Script -->
+    <script>
+      document.addEventListener('contextmenu', e => e.preventDefault());
+      document.addEventListener('keydown', e => {
+        if ((e.ctrlKey || e.metaKey) && ['c', 'a', 'x'].includes(e.key.toLowerCase())) {
+          e.preventDefault(); 
+        }
+      });
+    </script>
+
+</body>
+</html>
