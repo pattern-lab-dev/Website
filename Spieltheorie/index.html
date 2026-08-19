@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spieltheorie</title>
+    
+    <!-- Meta-Beschreibung für Google -->
+    <meta name="description" content="Spieltheorie, Ethische Strategie, Spieltheorie Lexikon.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google Fonts: Jost & Cormorant Garamond Light -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            font-family: "Futura-Light", "Futura Light", "Jost", sans-serif;
+            font-weight: 300;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+
+            /* Verhindert das Markieren von Text per Maus */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Header-Bild oben */
+        .hero-banner {
+            width: 100%;
+            height: 40vh;
+            min-height: 250px;
+            overflow: hidden;
+        }
+
+        .hero-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center bottom;
+            display: block;
+        }
+
+        /* Hauptinhalt Container */
+        .content {
+            max-width: 720px;
+            width: 90%;
+            margin: 0 auto;
+            padding: 30px 0 60px 0;
+            flex: 1;
+            text-align: left;
+        }
+
+        /* Navigation */
+        .site-nav {
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        .site-nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #666666;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            transition: color 0.2s ease;
+        }
+
+        .site-nav a:hover,
+        .site-nav a.active {
+            color: #000000;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        /* Linksbündige Überschrift */
+        .main-title {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(2.5rem, 5.5vw, 4.8rem);
+            font-weight: 300;
+            letter-spacing: 0.02em;
+            color: #111111;
+            margin-top: 0;
+            margin-bottom: 40px; 
+        }
+
+        /* Fließtext / Abhandlung */
+        .essay-section {
+            margin-top: 20px;
+            padding-top: 20px;
+        }
+
+        .essay-title {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+            font-weight: 300;
+            color: #111111;
+            margin-bottom: 25px;
+        }
+
+        .essay-text {
+            font-size: 0.95rem;
+            color: #333333;
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        .essay-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Sektion für das Spieltheorie Lexikon */
+        .lexicon-section {
+            margin-top: 80px;
+            padding-top: 60px;
+            border-top: 1px solid #eeeeee;
+        }
+
+        .lexicon-title {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 300;
+            color: #111111;
+            margin-bottom: 15px;
+        }
+
+        .lexicon-intro {
+            font-size: 0.95rem;
+            color: #666666;
+            margin-bottom: 40px;
+        }
+
+        .lexicon-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .lexicon-item {
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .lexicon-item:last-child {
+            border-bottom: none;
+        }
+
+        .lexicon-term {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #111111;
+            margin-bottom: 6px;
+        }
+
+        .lexicon-definition {
+            font-size: 0.95rem;
+            color: #333333;
+            line-height: 1.7;
+        }
+
+        /* Footer ganz unten */
+        footer {
+            text-align: center;
+            padding: 60px 20px 30px;
+            font-size: 0.8rem;
+            color: #888888;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-privacy {
+            font-size: 0.75rem;
+            color: #aaaaaa;
+            margin-bottom: 6px;
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            color: #888888;
+        }
+
+        @media (max-width: 768px) {
+            .hero-banner {
+                height: 30vh;
+                min-height: 200px;
+            }
+            .content {
+                width: 85%;
+                padding: 20px 0 40px 0;
+            }
+            .main-title {
+                margin-bottom: 30px;
+            }
+            .site-nav a {
+                display: inline-block;
+                margin-bottom: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header-Bild -->
+    <header class="hero-banner">
+        <img src="/Header_1.png" alt="Header Hintergrund">
+    </header>
+
+    <!-- Inhaltsbereich -->
+    <main class="content">
+
+        <!-- Navigation (Unverändert wie auf der Hauptseite) -->
+        <nav class="site-nav">
+            <a href="/">Systems Thinking</a>
+            <a href="/Systementwicklung/" rel="nofollow">Systementwicklung</a>
+        </nav>
+        
+        <!-- Überschrift -->
+        <h1 class="main-title">Spieltheorie</h1>
+
+        <!-- Abhandlung / Einleitungstext -->
+        <article class="essay-section">
+            <h2 class="essay-title">
+                Spieltheorie und die Architektur ethischer Kooperation
+            </h2>
+            
+            <div class="essay-text">
+                <p>
+                    Spieltheorie ist die wissenschaftliche Analyse strategischer Interaktion.<br>
+                    Entgegen der verbreiteten Annahme, dass strategisches Handeln rein auf Eigennutz<br>
+                    oder Konfrontation ausgerichtet sei, zeigt die moderne spieltheoretische Forschung:<br>
+                    Die nachhaltigsten, stabilsten und erfolgreichsten Systeme basieren auf Reziprozität,<br>
+                    Transparenz und gelebter, ethischer Kooperation.
+                </p>
+
+                <p>
+                  
+                    Erst ethisch fundierte Strategien – geprägt von Verlässlichkeit, Dialogbereitschaft<br>
+                    und einer zeitgemäßen Fehlerkultur (<em>Generous Tit for Tat</em>) –<br>
+                    ermöglichen das Entstehen von Synergien und echten Positivsummenspielen.
+                </p>
+
+                <p>
+                    Grundkonzepte der mathematischen Spieltheorie 
+                    
+                </p>
+            </div>
+        </article>
+
+        <!-- Spieltheorie Lexikon Sektion -->
+        <section id="lexikon" class="lexicon-section">
+            <h2 class="lexicon-title">Lexikon zur Spieltheorie</h2>
+            <p class="lexicon-intro">Eine strukturierte Sammlung</p>
+
+            <div class="lexicon-grid">
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">1. Positivsummenspiel (Win-Win-Dynamik)</h3>
+                    <p class="lexicon-definition">Eine Interaktionsstruktur, bei der die Gesamtsumme der Gewinne aller Beteiligten größer ist als Null. Durch Kooperation und Synergien entsteht neuer Wert, von dem alle Akteure gemeinsam profitieren können.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">2. Generous Tit for Tat (Großzügiges Wie-du-mir-so-ich-dir)</h3>
+                    <p class="lexicon-definition">Eine weiterentwickelte Kooperationsstrategie in verrauschten Umwelten. Sie beantwortet Kooperation stets mit Kooperation, verzeiht jedoch vereinzelte Fehler oder unabsichtliche Abweichungen des Gegenübers mit einer gewissen Wahrscheinlichkeit, um destruktive Konfliktspiralen zu verhindern.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">3. Nash-Gleichgewicht</h3>
+                    <p class="lexicon-definition">Ein stabiler Zustand im System, in dem kein Akteur einen Anreiz hat, einseitig von seiner gewählten Strategie abzuweichen, solange die anderen Akteure ihre Strategien beibehalten.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">4. Reziprozität</h3>
+                    <p class="lexicon-definition">Das Prinzip der Gegenseitigkeit in sozialen und strategischen Beziehungen. Positives Handeln wird mit Kooperation erwidert, was die Grundlage für langfristiges Systemvertrauen bildet.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">5. Pareto-Optimalität</h3>
+                    <p class="lexicon-definition">Ein Systemzustand, in dem die Ressourcen oder Ergebnisse so verteilt sind, dass kein Akteur besser gestellt werden kann, ohne einen anderen Akteur schlechter zu stellen. Er beschreibt maximale Gesamteffizienz.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">6. Gefangenendilemma</h3>
+                    <p class="lexicon-definition">Ein fundamentales Modell der Spieltheorie, das die Spannung zwischen individuellem Eigennutz und kollektiver Kooperation aufzeigt. Es demonstriert mathematisch, warum beidseitiges Vertrauen das beste Gesamtergebnis erzielt.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">7. Tit for Tat</h3>
+                    <p class="lexicon-definition">Eine der erfolgreichsten Basisstrategien in wiederholten Spielen: Sie beginnt stets kooperativ und spiegelt im nächsten Schritt exakt das Verhalten des Interaktionspartners aus der vorherigen Runde wider.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">8. Reputationskapital</h3>
+                    <p class="lexicon-definition">Der Wert, den ein Akteur durch konsistent verlässliches und ethisches Handeln über Zeit aufbaut. Ein hoher Reputationswert senkt die Transaktionskosten in künftigen Kooperationen erheblich.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">9. Dominante Strategie</h3>
+                    <p class="lexicon-definition">Eine Option, die für einen Spieler unabhängig von den Entscheidungen der anderen Beteiligten stets das beste Ergebnis bringt.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">10. Begrenzte Rationalität (Bounded Rationality)</h3>
+                    <p class="lexicon-definition">Das Konzept, dass Entscheidungsträger aufgrund unvollständiger Informationen, zeitlicher Einschränkungen und kognitiver Grenzen nicht perfekt mathematisch, sondern pragmatisch und werteorientiert handeln.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">11. Informationelle Asymmetrie</h3>
+                    <p class="lexicon-definition">Eine Ungleichverteilung von Wissen zwischen den Beteiligten. Ethische Spieltheorie zielt darauf ab, Transparenz zu schaffen, um Asymmetrien abzubauen und Vertrauen zu stärken.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">12. Nullsummenspiel</h3>
+                    <p class="lexicon-definition">Ein Szenario, in dem der Gewinn des einen Spielers exakt dem Verlust des anderen entspricht. In der modernen soziologischen Spieltheorie wird angestrebt, solche Starrheiten durch Kooperation in Positivsummenspiele zu überführen.</p>
+                </article>
+
+                <article class="lexicon-item">
+                    <h3 class="lexicon-term">13. Schatten der Zukunft (Shadow of the Future)</h3>
+                    <p class="lexicon-definition">Die Auswirkung der Erwartung künftiger Interaktionen auf das gegenwärtige Handeln. Je bedeutender die Zukunft erscheint, desto eher neigen Akteure in der Gegenwart zu nachhaltiger Kooperation.</p>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer mit Datenschutz-Hinweis & Copyright -->
+    <footer>
+        <p class="footer-privacy">
+            Diese Seite verwendet keine Cookies, kein Tracking und erhebt keine personenbezogenen Daten.
+        </p>
+        
+        <div class="copyright">
+            &copy; 2026 &middot; Private Website
+        </div>
+    </footer>
+
+    <!-- Kopierschutz-Script -->
+    <script>
+      document.addEventListener('contextmenu', e => e.preventDefault());
+      document.addEventListener('keydown', e => {
+        if ((e.ctrlKey || e.metaKey) && ['c', 'a', 'x'].includes(e.key.toLowerCase())) {
+          e.preventDefault(); 
+        }
+      });
+    </script>
+
+</body>
+</html>
